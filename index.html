@@ -1,177 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Favorite Things</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background-color: white;
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* PICTURES */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* AUDIO */
+        .audio-item {
+            margin-bottom: 25px;
+        }
+
+        .audio-item p {
+            font-weight: bold;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        /* VIDEOS */
+        .video-item {
+            margin-bottom: 30px;
+        }
+
+        .video-item p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="container">
-        
-        <h1>My Favorite Things</h1>
+    <h1>My Favorite Things</h1>
 
-        <!-- ==================== -->
-        <!-- FAVORITE PICTURES -->
-        <!-- ==================== -->
 
-        <div class="section">
-            <h2>📸 My Favorite Pictures</h2>
+    <!-- ========================= -->
+    <!-- FAVORITE PICTURES -->
+    <!-- ========================= -->
 
-            <div class="gallery">
+    <div class="section">
 
-                <div class="card">
-                    <img src="picture1.PNG" alt="Favorite Picture 1">
-                    <h3>Family</h3>
-                    <p>A special memory with my family.</p>
-                </div>
+        <h2>My Favorite Pictures</h2>
 
-                <div class="card">
-                    <img src="picture2.JPG" alt="Favorite Picture 2">
-                    <h3>My Dog</h3>
-                    <p>A memorable picture with my dog.</p>
-                </div>
+        <div class="gallery">
 
-                <div class="card">
-                    <img src="picture3.HEIC" alt="Favorite Picture 3">
-                    <h3>Friends</h3>
-                    <p>A fun memory with my friends.</p>
-                </div>
+            <img src="picture1.PNG" alt="Favorite Picture 1">
 
-                <div class="card">
-                    <img src="picture4.HEIC" alt="Favorite Picture 4">
-                    <h3>School Memory</h3>
-                    <p>A memorable moment from school.</p>
-                </div>
+            <img src="picture2.JPG" alt="Favorite Picture 2">
 
-                <div class="card">
-                    <img src="picture5.JPG" alt="Favorite Picture 5">
-                    <h3>Favorite Picture</h3>
-                    <p>One of my favorite pictures.</p>
-                </div>
+            <img src="picture3.HEIC" alt="Favorite Picture 3">
 
-            </div>
+            <img src="picture4.HEIC" alt="Favorite Picture 4">
+
+            <img src="picture5.JPG" alt="Favorite Picture 5">
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- FAVORITE SONGS -->
+    <!-- ========================= -->
+
+    <div class="section">
+
+        <h2>My Favorite Songs</h2>
+
+
+        <div class="audio-item">
+
+            <p>1. Beaches - Beabadoobee</p>
+
+            <audio controls>
+                <source src="Beaches.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+
         </div>
 
 
-        <!-- ==================== -->
-        <!-- FAVORITE SONGS -->
-        <!-- ==================== -->
+        <div class="audio-item">
 
-        <div class="section">
-            <h2>🎵 My Favorite Songs</h2>
+            <p>2. Glue Song - Beabadoobee</p>
 
-            <div class="songs">
+            <audio controls>
+                <source src="Glue Song.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
 
-                <div class="card">
-                    <h3>Beabadoobee - Beaches</h3>
-                    <p>My favorite song by Beabadoobee.</p>
-
-                    <audio controls>
-                        <source src="Beaches.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-                <div class="card">
-                    <h3>Beabadoobee - Glue Song</h3>
-                    <p>A song that I really enjoy listening to.</p>
-
-                    <audio controls>
-                        <source src="glue-song.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-                <div class="card">
-                    <h3>LeeHi - Only</h3>
-                    <p>One of my favorite Korean songs.</p>
-
-                    <audio controls>
-                        <source src="ONLY.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-                <div class="card">
-                    <h3>Daniel Caesar - Best Part</h3>
-                    <p>A song that I enjoy listening to.</p>
-
-                    <audio controls>
-                        <source src="Best Part.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-                <div class="card">
-                    <h3>Daniel Caesar - Hold Me Down</h3>
-                    <p>Another one of my favorite songs.</p>
-
-                    <audio controls>
-                        <source src="Hold Me Down.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-            </div>
         </div>
 
 
-        <!-- ==================== -->
-        <!-- TRAVEL DESTINATIONS -->
-        <!-- ==================== -->
+        <div class="audio-item">
 
-        <div class="section">
-            <h2>✈️ My Favorite Travel Destinations</h2>
+            <p>3. Only - LeeHi</p>
 
-            <div class="videos">
+            <audio controls>
+                <source src="ONLY.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
 
-                <div class="card">
-                    <h3>🇯🇵 Japan</h3>
-                    <p>A place I would love to visit.</p>
+        </div>
 
-                    <video controls>
-                        <source src="japan.mp4.MP4" type="video/mp4">
-                    </video>
-                </div>
 
-                <div class="card">
-                    <h3>🇰🇷 Korea</h3>
-                    <p>A destination I would love to explore.</p>
+        <div class="audio-item">
 
-                    <video controls>
-                        <source src="korea.mp4.MP4" type="video/mp4">
-                    </video>
-                </div>
+            <p>4. Best Part - Daniel Caesar</p>
 
-                <div class="card">
-                    <h3>🇨🇭 Switzerland</h3>
-                    <p>I would love to see its beautiful scenery.</p>
+            <audio controls>
+                <source src="Best Part.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
 
-                    <video controls>
-                        <source src="switzerland.mp4.MP4" type="video/mp4">
-                    </video>
-                </div>
+        </div>
 
-                <div class="card">
-                    <h3>🇮🇹 Italy</h3>
-                    <p>A beautiful destination I want to visit.</p>
 
-                    <video controls>
-                        <source src="italy.mp4.MP4" type="video/mp4">
-                    </video>
-                </div>
+        <div class="audio-item">
 
-                <div class="card">
-                    <h3>🇨🇳 China</h3>
-                    <p>A destination I would love to explore.</p>
+            <p>5. Hold Me Down - Daniel Caesar</p>
 
-                    <video controls>
-                        <source src="china.mp4.MP4" type="video/mp4">
-                    </video>
-                </div>
+            <audio controls>
+                <source src="Hold Me Down.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
 
-            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- TRAVEL DESTINATIONS -->
+    <!-- ========================= -->
+
+    <div class="section">
+
+        <h2>My Favorite Travel Destinations</h2>
+
+
+        <div class="video-item">
+
+            <p>🇯🇵 Japan</p>
+
+            <video controls>
+                <source src="japan.mp4.MP4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+        </div>
+
+
+        <div class="video-item">
+
+            <p>🇰🇷 Korea</p>
+
+            <video controls>
+                <source src="korea.mp4.MP4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+        </div>
+
+
+        <div class="video-item">
+
+            <p>🇨🇭 Switzerland</p>
+
+            <video controls>
+                <source src="switzerland.mp4.MP4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+        </div>
+
+
+        <div class="video-item">
+
+            <p>🇮🇹 Italy</p>
+
+            <video controls>
+                <source src="italy.mp4.MP4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+        </div>
+
+
+        <div class="video-item">
+
+            <p>🇨🇳 China</p>
+
+            <video controls>
+                <source src="china.mp4.MP4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
         </div>
 
     </div>
