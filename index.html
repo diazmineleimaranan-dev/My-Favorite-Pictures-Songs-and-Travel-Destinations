@@ -4,55 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Favorite Things</title>
+    <title>My Multimedia Page</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
             margin: 0;
-            padding: 20px;
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            background: #eef5f2;
+            color: #35413d;
         }
 
-        h1 {
+        /* HEADER */
+        header {
             text-align: center;
-            margin-bottom: 30px;
+            padding: 45px 20px;
+            background: #dcebe5;
+            border-bottom: 5px solid #b7d3c8;
         }
 
-        h2 {
-            margin-bottom: 20px;
+        header h1 {
+            margin: 0;
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+            font-size: 38px;
+            letter-spacing: 2px;
+            color: #405b54;
         }
 
+        header p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #65756f;
+        }
+
+        /* GENERAL SECTION */
         .section {
-            background-color: white;
-            max-width: 900px;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            width: 92%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #ffffff;
+            border: 2px solid #d5e5df;
+            border-radius: 20px;
+            box-shadow: 0 5px 18px rgba(70, 90, 82, 0.10);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #49675e;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 25px;
         }
 
         /* PICTURES */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 20px;
         }
 
-        .gallery img {
+        .photo-card {
+            padding: 10px;
+            background: #f8fbfa;
+            border: 3px solid #c7ddd5;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(70, 90, 82, 0.10);
+            transition: transform 0.2s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-card img {
+            display: block;
             width: 100%;
-            height: 180px;
+            height: 190px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 12px;
+        }
+
+        .photo-card p {
+            text-align: center;
+            margin: 10px 0 3px;
+            font-weight: bold;
+            color: #58736a;
         }
 
         /* AUDIO */
-        .audio-item {
-            margin-bottom: 25px;
+        .audio-card {
+            background: #f7faf9;
+            border: 2px solid #d0e2dc;
+            border-radius: 15px;
+            padding: 18px;
+            margin-bottom: 15px;
         }
 
-        .audio-item p {
+        .audio-card p {
+            margin-top: 0;
             font-weight: bold;
+            color: #49675e;
         }
 
         audio {
@@ -60,194 +115,216 @@
         }
 
         /* VIDEOS */
-        .video-item {
-            margin-bottom: 30px;
+        .video-card {
+            background: #f7faf9;
+            border: 2px solid #d0e2dc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-bottom: 20px;
         }
 
-        .video-item p {
-            font-weight: bold;
-            font-size: 18px;
+        .video-card h3 {
+            margin-top: 0;
+            color: #49675e;
         }
 
         video {
             width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
+            max-width: 700px;
+            display: block;
+            margin: auto;
+            border-radius: 12px;
+            background: #dfe9e5;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: #dcebe5;
+            color: #61746d;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            .section {
+                padding: 20px;
+                width: 94%;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .photo-card img {
+                height: 150px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>My Favorite Things</h1>
+    <!-- HEADER -->
+    <header>
+        <h1>MY MULTIMEDIA PAGE</h1>
+        <p>My Favorite Pictures, Songs, and Travel Destinations</p>
+    </header>
 
 
-    <!-- ========================= -->
+    <!-- ==================== -->
     <!-- FAVORITE PICTURES -->
-    <!-- ========================= -->
+    <!-- ==================== -->
 
-    <div class="section">
+    <section class="section">
 
-        <h2>My Favorite Pictures</h2>
+        <h2>📸 My Favorite Pictures</h2>
 
         <div class="gallery">
 
-            <img src="picture1.PNG" alt="Favorite Picture 1">
+            <div class="photo-card">
+                <img src="picture1.PNG" alt="Favorite Picture 1">
+                <p>Picture 1</p>
+            </div>
 
-            <img src="picture2.JPG" alt="Favorite Picture 2">
+            <div class="photo-card">
+                <img src="picture2.JPG" alt="Favorite Picture 2">
+                <p>Picture 2</p>
+            </div>
 
-            <img src="picture3.HEIC" alt="Favorite Picture 3">
+            <div class="photo-card">
+                <img src="picture3.HEIC" alt="Favorite Picture 3">
+                <p>Picture 3</p>
+            </div>
 
-            <img src="picture4.HEIC" alt="Favorite Picture 4">
+            <div class="photo-card">
+                <img src="picture4.HEIC" alt="Favorite Picture 4">
+                <p>Picture 4</p>
+            </div>
 
-            <img src="picture5.JPG" alt="Favorite Picture 5">
+            <div class="photo-card">
+                <img src="picture5.JPG" alt="Favorite Picture 5">
+                <p>Picture 5</p>
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- ========================= -->
+    <!-- ==================== -->
     <!-- FAVORITE SONGS -->
-    <!-- ========================= -->
+    <!-- ==================== -->
 
-    <div class="section">
+    <section class="section">
 
-        <h2>My Favorite Songs</h2>
+        <h2>🎵 My Favorite Songs</h2>
 
-
-        <div class="audio-item">
-
-            <p>1. Beaches - Beabadoobee</p>
-
+        <div class="audio-card">
+            <p>01 — Beaches · Beabadoobee</p>
             <audio controls>
                 <source src="Beaches.mp3" type="audio/mpeg">
-                Your browser does not support audio.
             </audio>
-
         </div>
 
-
-        <div class="audio-item">
-
-            <p>2. Glue Song - Beabadoobee</p>
-
+        <div class="audio-card">
+            <p>02 — Glue Song · Beabadoobee</p>
             <audio controls>
                 <source src="Glue Song.mp3" type="audio/mpeg">
-                Your browser does not support audio.
             </audio>
-
         </div>
 
-
-        <div class="audio-item">
-
-            <p>3. Only - LeeHi</p>
-
+        <div class="audio-card">
+            <p>03 — Only · LeeHi</p>
             <audio controls>
                 <source src="ONLY.mp3" type="audio/mpeg">
-                Your browser does not support audio.
             </audio>
-
         </div>
 
-
-        <div class="audio-item">
-
-            <p>4. Best Part - Daniel Caesar</p>
-
+        <div class="audio-card">
+            <p>04 — Best Part · Daniel Caesar</p>
             <audio controls>
                 <source src="Best Part.mp3" type="audio/mpeg">
-                Your browser does not support audio.
             </audio>
-
         </div>
 
-
-        <div class="audio-item">
-
-            <p>5. Hold Me Down - Daniel Caesar</p>
-
+        <div class="audio-card">
+            <p>05 — Hold Me Down · Daniel Caesar</p>
             <audio controls>
                 <source src="Hold Me Down.mp3" type="audio/mpeg">
-                Your browser does not support audio.
             </audio>
-
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- ========================= -->
-    <!-- TRAVEL DESTINATIONS -->
-    <!-- ========================= -->
+    <!-- ==================== -->
+    <!-- TRAVEL VIDEOS -->
+    <!-- ==================== -->
 
-    <div class="section">
+    <section class="section">
 
-        <h2>My Favorite Travel Destinations</h2>
+        <h2>✈️ My Dream Travel Destinations</h2>
 
-
-        <div class="video-item">
-
-            <p>🇯🇵 Japan</p>
+        <div class="video-card">
+            <h3>🇯🇵 Japan</h3>
 
             <video controls>
                 <source src="japan.mp4.MP4" type="video/mp4">
-                Your browser does not support video.
             </video>
-
         </div>
 
 
-        <div class="video-item">
-
-            <p>🇰🇷 Korea</p>
+        <div class="video-card">
+            <h3>🇰🇷 Korea</h3>
 
             <video controls>
                 <source src="korea.mp4.MP4" type="video/mp4">
-                Your browser does not support video.
             </video>
-
         </div>
 
 
-        <div class="video-item">
-
-            <p>🇨🇭 Switzerland</p>
+        <div class="video-card">
+            <h3>🇨🇭 Switzerland</h3>
 
             <video controls>
                 <source src="switzerland.mp4.MP4" type="video/mp4">
-                Your browser does not support video.
             </video>
-
         </div>
 
 
-        <div class="video-item">
-
-            <p>🇮🇹 Italy</p>
+        <div class="video-card">
+            <h3>🇮🇹 Italy</h3>
 
             <video controls>
                 <source src="italy.mp4.MP4" type="video/mp4">
-                Your browser does not support video.
             </video>
-
         </div>
 
 
-        <div class="video-item">
-
-            <p>🇨🇳 China</p>
+        <div class="video-card">
+            <h3>🇨🇳 China</h3>
 
             <video controls>
                 <source src="china.mp4.MP4" type="video/mp4">
-                Your browser does not support video.
             </video>
-
         </div>
 
-    </div>
+    </section>
 
-    
+
+    <!-- FOOTER -->
+    <footer>
+        My Multimedia Page · Created for my school activity
+    </footer>
+
 </body>
 </html>
